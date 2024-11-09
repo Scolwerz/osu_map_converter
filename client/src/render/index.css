@@ -1,0 +1,130 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.input-height {
+  height: 2.35rem;
+}
+
+.main {
+  width: calc(100% - 13rem);
+}
+
+input {
+  @apply p-2 bg-gray-50 rounded-md shadow-sm border-gray-300 border text-gray-600 w-full focus:outline-none focus:border-monokai-light2 transition ease-in-out placeholder-gray-500;
+  @apply dark:bg-monokai-light2 dark:border dark:border-black dark:placeholder-gray-200 dark:text-gray-200;
+}
+
+input:disabled {
+  @apply bg-gray-200 dark:bg-monokai-light2;
+}
+
+.button {
+  @apply dark:bg-blue-600 dark:hover:bg-blue-700 hover:bg-blue-400 bg-blue-400 text-white cursor-pointer transition-colors
+}
+
+.box-selector {
+  @apply content-box transition-colors button
+}
+
+.box-selector-off {
+  @apply box-selector button dark:hover:border-black hover:border-gray-600 hover:text-white cursor-pointer text-black dark:text-white !important
+}
+
+.box-selector-on {
+  @apply box-selector dark:border-black border-gray-600 text-white font-semibold text-lg cursor-default bg-blue-600 !important
+}
+
+.warning {
+  @apply text-red-600 hover:text-red-700 cursor-pointer
+}
+
+.shadow-border {
+  @apply shadow-sm rounded-md border dark:border-black dark:bg-zinc-800 border-gray-400 bg-white;
+}
+
+.content-box {
+  @apply bg-white dark:bg-monokai-dark p-6 shadow-border w-full;
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.title {
+  @apply text-gray-900 text-lg font-semibold dark:text-gray-100;
+}
+
+.subtitle {
+  @apply text-gray-500 dark:text-gray-200;
+}
+
+.label {
+  @apply block text-sm leading-5 font-medium dark:text-gray-200 text-gray-700;
+}
+
+.rc-slider-rail {
+  @apply dark:bg-monokai-light2
+}
+
+.rc-slider-handle {
+  @apply dark:border-sky-600
+}
+
+.rc-slider-track {
+  @apply dark:bg-sky-600
+}
+
+@layer components {
+  /* .my-react-select-container {
+  } */
+
+  .my-react-select-container .my-react-select__control {
+    @apply bg-gray-50 dark:bg-monokai-light2 rounded-md shadow-sm border border-neutral-300 dark:border-none hover:border-neutral-400;
+  }
+
+  .my-react-select-container .my-react-select__control--is-focused {
+    @apply border-neutral-500 hover:border-neutral-500 dark:bg-monokai-light2 dark:hover:bg-monokai-light2 shadow-none;
+  }
+
+  .my-react-select-container .my-react-select__menu {
+    @apply bg-neutral-100 dark:bg-monokai-light2 border border-neutral-300 dark:border-monokai-border;
+  }
+
+  .my-react-select-container .my-react-select__option {
+    @apply text-neutral-600 dark:text-neutral-200 bg-neutral-100 hover:bg-neutral-200 dark:bg-monokai-light2 dark:hover:bg-monokai-dark;
+  }
+  /* .my-react-select-container .my-react-select__option--is-focused {
+    @apply bg-neutral-200 dark:bg-neutral-800;
+  } */
+
+  .my-react-select-container .my-react-select__indicator-separator {
+    @apply bg-neutral-400;
+  }
+
+  .my-react-select-container .my-react-select__input-container,
+  .my-react-select-container .my-react-select__placeholder,
+  .my-react-select-container .my-react-select__single-value {
+    @apply text-neutral-600 dark:text-neutral-200;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply dark:bg-monokai-light bg-stone-200;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply dark:bg-monokai-dark bg-monokai-light;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
